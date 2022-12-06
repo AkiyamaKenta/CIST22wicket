@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head></head>
+<body>
+<h1>ユーザを作成する</h1>
+<form action="#" wicket:id="userInfo">
+  <!-- 独自のバリデーションを表示する -->
+  <wicket:enclosure child="fbMsg">
+    <div wicket:id="fbMsg">バリデーションの有無と理由</div>
+  </wicket:enclosure>
+  <div>ユーザー名：<input type="text" wicket:id="userName"/></div>
+  <div>パスワード：<input type="password" wicket:id="userPass"/></div>
+  <div>
+    <button type="submit">送信</button>
+  </div>
+</form>
+<div><a href="#" wicket:id="toHome">戻る</a></div>
+</body>
+</html>
