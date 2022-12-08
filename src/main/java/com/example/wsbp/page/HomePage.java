@@ -21,11 +21,11 @@ public class HomePage extends WebPage {
         var youLabel = new Label("you", youModel);
         add(youLabel);
 
-        var gakusekiModel = Model.of("b1970010");
+        var gakusekiModel = Model.of("b2200090");
         var gakusekiLabel = new Label("gakuseki", gakusekiModel);
         add(gakusekiLabel);
 
-        var nameModel = Model.of("千歳 光");
+        var nameModel = Model.of("Akiyama Kenta");
         Label nameLabel = new Label("name", nameModel);
         add(nameLabel);
 

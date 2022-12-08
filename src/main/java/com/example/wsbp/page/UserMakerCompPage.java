@@ -1,5 +1,6 @@
 package com.example.wsbp.page;
 
+//ユーザー作成03
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;

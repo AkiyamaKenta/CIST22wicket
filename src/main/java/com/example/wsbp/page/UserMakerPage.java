@@ -1,13 +1,18 @@
 package com.example.wsbp.page;
 
-import com.example.wsbp.service.IUserService;
-import org.apache.wicket.markup.html.WebPage;
+//ユーザー追加01
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.PasswordTextField;
 import org.apache.wicket.markup.html.form.TextField;
+
+//ユーザー追加02
+import org.apache.wicket.model.Model;
+
+import com.example.wsbp.service.IUserService;
+import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
-import org.apache.wicket.model.Model;
+
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.apache.wicket.validation.validator.StringValidator;
 import org.wicketstuff.annotation.mount.MountPath;
@@ -46,8 +51,7 @@ public class UserMakerPage extends WebPage {
                     return;
                 }
 
-                userService.registerUser(userName, userPass);
-                setResponsePage(new UserMakerCompPage(userNameModel));
+
             }
         };
         add(userInfoForm);
