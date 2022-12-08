@@ -13,6 +13,8 @@ import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.apache.wicket.validation.validator.StringValidator;
 import org.wicketstuff.annotation.mount.MountPath;
 
+import java.util.Objects;
+
 @WicketSignInPage
 @MountPath("Sign")
 public class SignPage extends WebPage {

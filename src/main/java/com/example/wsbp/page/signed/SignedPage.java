@@ -41,6 +41,7 @@ public class SignedPage extends WebPage {
         };
         add(signoutLink);
 
+
         // Service からデータベースのユーザ一覧をもらい、Modelにする
         // List型のモデルは Model.ofList(...) で作成する。
         // なお、DBや外部のWEB-APIなどのデータを取得する場合、通常はLoadableDetachableModelを利用する
@@ -52,9 +53,12 @@ public class SignedPage extends WebPage {
         var usersLV = new ListView<>("users", authUsersModel) {
             @Override
             protected void populateItem(ListItem<AuthUser> listItem) {
+                // List型のモデルから、 <li>...</li> ひとつ分に分けられたモデルを取り出す
                 var itemModel = listItem.getModel();
                 var authUser = itemModel.getObject();
 
+                // インスタンスに入れ込まれたデータベースの検索結果を、列（＝フィールド変数）ごとにとりだして表示する
+                // add する先が listItem になることに注意。
                 var userNameModel = Model.of(authUser.getUserName());
                 var userNameLabel = new Label("userName", userNameModel);
                 listItem.add(userNameLabel);
