@@ -31,7 +31,7 @@ public class SignPage extends WebPage {
             protected void onSubmit() {
                 var userName = userNameModel.getObject();
                 var userPass = userPassModel.getObject();
-                // b1992490...の定数で照合していたものを、DB経由に変更
+                // b2000090...の定数で照合していたものを、DB経由に変更
                 if (service.existsUser(userName, userPass)) {
                     MySession.get().sign(userName);
                 }
